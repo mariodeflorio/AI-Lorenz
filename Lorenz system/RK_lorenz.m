@@ -65,7 +65,6 @@ y2_anal = y;
 y3_anal = z;
 
 % save data
-
 directory = 'data';
 
 % Save the variables in the specified file
