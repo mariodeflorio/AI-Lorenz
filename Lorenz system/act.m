@@ -3,11 +3,10 @@ function [act, actd, actdd, actddd] = act(x,w,b,type_Activation)
 %-------------------------------------------------------------------------%
 
 %{
-Decription:
+Description:
 This function determines the function outputs along with its first
 derivative, second derivative, and third derivative for an activation
-function. So far we only are using the sigmoid function. In the future we
-will add more activation functions.
+function.
 
 Author(s):
 Kristofer Drozd
