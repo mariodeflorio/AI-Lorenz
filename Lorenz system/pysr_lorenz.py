@@ -16,7 +16,6 @@ h = []  # Target variable 'h'
 k = []  # Target variable 'k'
 t = []
 
-# with open('t_y1_y2_y3_f_g_h.csv') as csv_file:
 with open(file_path) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
