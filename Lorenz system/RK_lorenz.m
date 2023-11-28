@@ -9,6 +9,8 @@ format long
   Mario De Florio
 %}
 
+% create data directory
+mkdir data
 
 % Parameters
 sigma = 10;
