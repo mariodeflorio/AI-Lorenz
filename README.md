@@ -20,11 +20,11 @@ Make sure you have the following prerequisites installed:
 
 ### Usage (Lorenz System example)
 
-1. Run the file 'RK_lorenz.m' for data generation. 
+1. Run the file '*RK_lorenz.m*' for data generation. 
 
-   This MATLAB script generates data for the Lorenz system using the Runge-Kutta method. The user can define the time domain, the step size 'h_step', governing parameters, and initial conditions. The script saves the results in a file named 'data_generated.mat' into the directory 'data'. The generated data includes solutions for the variables y1, y2, and y3, as well as the right-hand sides (RHS) of the Lorenz system. 
+   This MATLAB script generates data for the Lorenz system using the Runge-Kutta method. The user can define the time domain, the step size *h_step*, governing parameters, and initial conditions. The script saves the results in a file named '*data_generated.mat*' into the directory '*data*'. The generated data includes solutions for the variables y1, y2, and y3, as well as the right-hand sides (RHS) of the Lorenz system. 
    
-2. Run the file 'bbxtfc_lorenz.m' for dynamics learning and RHS extraction. 
+2. Run the file '*bbxtfc_lorenz.m*' for dynamics learning and RHS extraction. 
 
    This MATLAB script performs the X-TFC algorithm with domain decomposition for black-box learning of the Lorenz system. The data generated in step 1. is loaded, and the user can add noise to it by modifying the variable *noise_std*. Depending on the presence or absence of noise in the data, different values of collocation points per each sub-domain *N*, number of neurons *m*, and time step length *t_step* can be chosen. Follows the list of tunable parameters:
       * *N*, number of collocation points per each sub-domain
@@ -41,9 +41,9 @@ Make sure you have the following prerequisites installed:
       * *window_size*, Frame length, specified as a positive odd integer
       * *polynomial_order*, Polynomial order, specified as a positive integer (must be smaller than window_size).
 
-   The script prints the mean absolute errors for learned dynamics and RHS, and the variables are saved in 'pysr_data.csv' (to be used in step 3.) and in 'bbxtfc_data.mat' (to be used in step 4.).
+   The script prints the mean absolute errors for learned dynamics and RHS, and the variables are saved in '*pysr_data.csv*' (to be used in step 3.) and in '*bbxtfc_data.mat*' (to be used in step 4.).
 
-3. Run the file 'pysr_lorenz.py' for symbolic regression.
+3. Run the file '*pysr_lorenz.py*' for symbolic regression.
 
    This Python script performs symbolic regression with [PySR](https://github.com/MilesCranmer/PySR) algorithm to distill the mathematical expressions that best fit the provided input data. The learned dynamics and RHS from step 2. are loaded, and the user can modify (for each state variable of the system), the following parameters: 
       * *population*, Number of populations running
@@ -53,7 +53,7 @@ Make sure you have the following prerequisites installed:
 
    The script will print the best candidate mathematical expressions that are used to build the discovered dynamical system.
 
-4. Run the file 'SR_test_lorenz.m' for prediction and validation.
+4. Run the file '*SR_test_lorenz.m*' for prediction and validation.
 
    This MATLAB script solves the system on ODEs discovered by PYSR in step 3. and compares the discovered chaotic trajectory with the synthetic trajectory generated in step 1. All the needed variables are loaded from the 'data' directory. The user only needs to build the system of ODEs discovered with symbolic regression.  
 
