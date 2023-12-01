@@ -24,7 +24,7 @@ load(fullfile(directory, 'data_generated.mat'));
 %% Input
 
 % Define the standard deviation of the Gaussian noise
-noise_std = 0; % Adjust this as needed [ 0 , 0.1 , 0.2 , 1.0 , 2.0 ]
+noise_std = 0.0; % Adjust this as needed [ 0 , 0.01 , 0.02 , 0.05 , 0.1 ]
 
 if noise_std == 0
     N = 20;    % Number of collocation points in each subdomain
@@ -225,14 +225,7 @@ xtfc_elapsedtime = toc(tStart) ;
 %% 
 
 % Smoothing the outliers
-
-if ismember(noise_std, [0.1, 0.5])
-    window_size = 31;  % You can adjust this to control the amount of smoothing
-elseif ismember(noise_std, [1.0, 2.0])
-    window_size = 55;
-else
-    % Handle other cases if needed
-end
+window_size = 85;  % You can adjust this to control the amount of smoothing
 
 polynomial_order = 5;  % Order of the polynomial to fit
 
