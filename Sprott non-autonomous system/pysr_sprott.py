@@ -44,14 +44,14 @@ X = d[:, 0:4]  # Input features: 'y1,' 'y2,' 'y3'
 
 
 pysr_params = dict(
-    populations=30,
+    populations=50,
     model_selection="best",
 )
 
 
 # Symbolic Regression for 'f'
 model_f = PySRRegressor(
-    niterations=30,
+    niterations=500,
     binary_operators=["+", "*","-"],
     unary_operators=["sin"],
     **pysr_params
@@ -67,7 +67,7 @@ model_g = PySRRegressor(
 
 # Symbolic Regression for 'h'
 model_h = PySRRegressor(
-    niterations=30,
+    niterations=50,
     binary_operators=["+", "*","-"],
     unary_operators=["sin","square"],
     **pysr_params
