@@ -32,6 +32,7 @@ Make sure you have the following prerequisites installed:
       - *IterMax*, maximum number of iterations of the least-squares algorithm 
       - *IterTol*, tolerance of the least-squares algorithm
       - *type_act*, select the activation function to use.
+        
    If the data is noisy, the learned dynamics and RHS can be present outliers. Smooth them with a Savitzky–Golay filter
  and tune the following parameters for the :
       - *window_size*, Frame length, specified as a positive odd integer
