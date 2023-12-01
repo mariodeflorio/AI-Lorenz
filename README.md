@@ -5,7 +5,7 @@ Discovering mathematical models that characterize the observed behavior of dynam
 
 ## Getting Started
 
-Follow these steps to use the codes and explore the capabilities of the framework.
+Follow these steps to use the codes and explore the capabilities of *AI-Lorenz*.
 
 ### Prerequisites
 
@@ -17,11 +17,10 @@ Make sure you have the following prerequisites installed:
 
 ### Usage (Lorenz System example)
 
-1. Run the file
+1. Run the file 'RK_lorenz.m'. This MATLAB script generates data for the Lorenz system using the Runge-Kutta method and saves the results in a file named 'data_generated.mat' into the directory 'data'. The generated data includes solutions for the variables y1, y2, and y3, as well as the right-hand sides (RHS) of the Lorenz system. The user can define the time domain, the step size 'h_step', governing parameters, and initial conditions.
+   
+2. 
 
-       ```bash
-    RK_lorenz.m
-    ```
 
 
 
