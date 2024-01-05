@@ -93,7 +93,6 @@ rhs_1_data = spline(y_RK_inter,rhs_1_anal,ind)';
 rhs_2_data = spline(y_RK_inter,rhs_2_anal,ind)';
 rhs_3_data = spline(y_RK_inter,rhs_3_anal,ind)';
 
-
 %% Activation function definition
 
 weight = unifrnd(LB,UB,m,1);
@@ -207,7 +206,7 @@ for i = 1:(n_t-1)
     y2_0 = y2(end);
     y3_0 = y3(end);
 
-	sol1((N-1)*(i-1)+1:(N-1)*i+1) = y1;
+    sol1((N-1)*(i-1)+1:(N-1)*i+1) = y1;
     sol2((N-1)*(i-1)+1:(N-1)*i+1) = y2;
     sol3((N-1)*(i-1)+1:(N-1)*i+1) = y3;
 
